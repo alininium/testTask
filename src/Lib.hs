@@ -102,7 +102,7 @@ server = do
   run 8080 $ app pool
   where
     conn_settings :: Connection.Settings
-    conn_settings = Connection.settings "localhost" 5433 "postgres" "postgres" "postgres"
+    conn_settings = Connection.settings "localhost" 5432 "postgres" "postgres" "postgres"
 
 newtype AppM a =
   AppM
