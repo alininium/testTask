@@ -1,8 +1,8 @@
-FROM haskell
+FROM haskell:9.2
 RUN mkdir /server
 COPY . /server
 WORKDIR /server
 RUN stack setup
-RUN stack install --resolver lts-20.13
+RUN stack install 
 RUN stack build
-CMD ["stack", "run"]
+ENTRYPOINT ["stack", "run"]
