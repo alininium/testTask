@@ -49,6 +49,7 @@ library
       aeson
     , base >=4.7 && <5
     , bytestring
+    , dotenv
     , hasql
     , hasql-pool
     , hasql-th
@@ -88,6 +89,7 @@ executable web-exe
       aeson
     , base >=4.7 && <5
     , bytestring
+    , dotenv
     , hasql
     , hasql-pool
     , hasql-th
@@ -129,6 +131,7 @@ test-suite web-test
       aeson
     , base >=4.7 && <5
     , bytestring
+    , dotenv
     , hasql
     , hasql-pool
     , hasql-th

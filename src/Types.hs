@@ -8,7 +8,7 @@ module Types
  ) where
 
 import GHC.Generics (Generic)
-import Control.Monad.IO.Class (MonadIO, liftIO)
+import Control.Monad.IO.Class (MonadIO)
 import Data.Aeson
 import qualified Data.Text as T
 import Hasql.Session (Session)
@@ -35,10 +35,10 @@ data Phrase =
   deriving (Show, Generic)
 
 tupleToUser :: (Int32, T.Text) -> User
-tupleToUser (id, name) = User id name 
+tupleToUser (u_id, u_name) = User u_id u_name 
 
 tupleToPhrase :: (Int32, T.Text, Int32, Bool) -> Phrase
-tupleToPhrase (id, text, author, approved) = Phrase id text author approved
+tupleToPhrase (u_id, text, author, approved) = Phrase u_id text author approved
 
 instance FromJSON Phrase
 instance ToJSON Phrase

@@ -39,6 +39,7 @@ dependencies:
 - wreq
 - lens-aeson
 - lens
+- dotenv
 
 default-extensions:
 - OverloadedStrings
